@@ -19,7 +19,8 @@ def start_the_game():
             print('• ========== TURN ==========')
             game.play_turn()
             print('• ==========================')
-            
+            if len(game.player.cards) == 0 or len(game.computer.cards) == 0:
+                break
         else:
             print("Enter your choice (1 or 2 only)!")
     print(f'• {name} cards: {len(game.player.cards)} | Computer cards: {len(game.computer.cards)}')
